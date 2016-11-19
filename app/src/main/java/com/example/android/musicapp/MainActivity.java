@@ -3,6 +3,7 @@ package com.example.android.musicapp;
 import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
@@ -244,6 +245,36 @@ public class MainActivity extends AppCompatActivity {
                     adapter = new SongAdapter(MainActivity.this, favSongs, listener, listener2, mainList);
                     ListView listView = (ListView) findViewById(R.id.list);
                     listView.setAdapter(adapter);
+                }
+            });
+
+            //Listener for the goodActivityButton
+            Button goodActivityButton = (Button) findViewById(R.id.good_activity_button);
+            goodActivityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Create new intent to go to {@link GoodActivity}
+                    Intent intent = new Intent(MainActivity.this, GoodActivity.class);
+                        // Send the full goodSongs list
+                        intent.putExtra("currentSong", goodSongs);
+
+                    // Launch the {@link EditorActivity} to display the data for the current pet.
+                    startActivity(intent);
+                }
+            });
+
+            //Listener for the badActivityButton
+            final Button badActivityButton = (Button) findViewById(R.id.bad_activity_button);
+            badActivityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Create new intent to go to {@link GoodActivity}
+                    Intent intent = new Intent(MainActivity.this, BadActivity.class);
+                    // Send the full goodSongs list
+                    intent.putExtra("currentSongBad", badSongs);
+
+                    // Launch the {@link EditorActivity} to display the data for the current pet.
+                    startActivity(intent);
                 }
             });
 

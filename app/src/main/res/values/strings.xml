@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MusicApp</string>
+    <string name="title_player">Music Player</string>
+    <string name="main_button">Main</string>
+    <string name="fav_button">Fav</string>
+    <string name="god_button">God</string>
+    <string name="bad_button">Bad</string>
+    <string name="bad_activity_title">Bad Music Overview</string>
+    <string name="good_activity_title">Good Music Overview</string>
+    <string name="back">Back</string>
 </resources>

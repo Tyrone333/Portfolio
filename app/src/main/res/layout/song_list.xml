@@ -6,6 +6,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/title_player"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,14 +25,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Main" />
+            android:text="@string/main_button" />
 
         <Button
             android:id="@+id/favoriteList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Fav" />
+            android:text="@string/fav_button" />
 
         <Button
             android:id="@+id/feelGoodList"
@@ -32,14 +40,28 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:alpha="40"
-            android:text="Good" />
+            android:text="@string/god_button" />
 
         <Button
             android:id="@+id/feelBadList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Bad" />
+            android:text="@string/bad_button" />
+
+        <Button
+            android:id="@+id/good_activity_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="!" />
+
+        <Button
+            android:id="@+id/bad_activity_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="!" />
     </LinearLayout>
 
     <LinearLayout
